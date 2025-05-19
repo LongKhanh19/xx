@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Media Queries Example</title>
-  <style>
-    /* Style mặc định cho div và hình ảnh */
-    div.box {
-      width: 100%;
-      margin: 10px 0;
-      background-color: lightgray;
-      text-align: center;
-      padding: 20px;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Responsive Final Project</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f9f9f9;
+  }
+  header, section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Media Query 1: Mobile devices (max-width 480px) */
+  @media (max-width: 480px) {
+    body {
+      background-color: #e0f7fa;
     }
-
-    img.responsive-img {
-      width: 100%;
-      height: auto;
+    p {
+      font-size: 14px;
     }
-
-    /* Media Query 1: Màn hình từ 600px trở lên */
-    @media screen and (min-width: 600px) {
-      div.box {
-        width: 48%;
-        display: inline-block;
-        margin: 1%;
-      }
-
-      img.responsive-img {
-        width: 90%;
-      }
+    section {
+      padding: 10px;
     }
+  }
 
-    /* Media Query 2: Màn hình từ 900px trở lên */
-    @media screen and (min-width: 900px) {
-      div.box {
-        width: 30%;
-        margin: 1.5%;
-      }
-
-      img.responsive-img {
-        width: 80%;
-      }
+  /* Media Query 2: Small tablets (min-width 481px) and (max-width 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    body {
+      background-color: #fff3e0;
     }
-  </style>
+    p {
+      font-size: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+
+  /* Media Query 3: Medium devices (min-width 769px) and (max-width 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    body {
+      background-color: #e8f5e9;
+    }
+    p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: auto;
+    }
+  }
+
+  /* Media Query 4: Large devices (min-width 1025px) */
+  @media (min-width: 1025px) {
+    body {
+      background-color: #fffde7;
+    }
+    p {
+      font-size: 18px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      padding: 40px;
+    }
+  }
+</style>
 </head>
 <body>
-  <div class="box">
-    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 1" />
-    <p>Content box 1</p>
-  </div>
-  <div class="box">
-    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 2" />
-    <p>Content box 2</p>
-  </div>
-  <div class="box">
-    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 3" />
-    <p>Content box 3</p>
-  </div>
+
+<header>
+  <h1>Welcome to My Responsive Website</h1>
+</header>
+
+<section>
+  <img src="https://via.placeholder.com/800x400" alt="Sample Image One" />
+  <p>This is a paragraph describing the first image. It is responsive and changes size according to the screen width.</p>
+</section>
+
+<section>
+  <img src="https://via.placeholder.com/800x400?text=Second+Image" alt="Sample Image Two" />
+  <p>Another paragraph providing more information. The text and images resize nicely across devices.</p>
+</section>
+
 </body>
 </html>
