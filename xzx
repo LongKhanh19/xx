@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Media Queries Example</title>
+  <style>
+    /* Style mặc định cho div và hình ảnh */
+    div.box {
+      width: 100%;
+      margin: 10px 0;
+      background-color: lightgray;
+      text-align: center;
+      padding: 20px;
+    }
+
+    img.responsive-img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Media Query 1: Màn hình từ 600px trở lên */
+    @media screen and (min-width: 600px) {
+      div.box {
+        width: 48%;
+        display: inline-block;
+        margin: 1%;
+      }
+
+      img.responsive-img {
+        width: 90%;
+      }
+    }
+
+    /* Media Query 2: Màn hình từ 900px trở lên */
+    @media screen and (min-width: 900px) {
+      div.box {
+        width: 30%;
+        margin: 1.5%;
+      }
+
+      img.responsive-img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 1" />
+    <p>Content box 1</p>
+  </div>
+  <div class="box">
+    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 2" />
+    <p>Content box 2</p>
+  </div>
+  <div class="box">
+    <img class="responsive-img" src="https://via.placeholder.com/300" alt="Image 3" />
+    <p>Content box 3</p>
+  </div>
+</body>
+</html>
